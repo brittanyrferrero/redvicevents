@@ -1940,7 +1940,7 @@
 		margin: 0;
 		padding: 14em 0 14em 0;
 		cursor: default;
-		background-image:    url('../../images/beakers_edit2.jpg');
+		background-image:    url('../../images/beakers.jpg');
 	    background-size:     cover;
 	    background-repeat:   no-repeat;
 	    background-position: center center;
@@ -2034,12 +2034,12 @@
 
 			#header2 div {
 				background-color:rgba(255, 255, 255, 0.9); 
-				padding: 2% 5%; 
+				padding: 0 5%; 
 				margin: 0 10%; 
-				color: rgba(0, 0, 0, 0.75);
 			}
 
 			#header2 header p {
+				color: rgba(0, 0, 0, 0.75);
 				font-weight: 400;
 				font-size: 1em;
 				text-transform: uppercase;
@@ -2715,3 +2715,12 @@
 			}
 
 	}
+
+#fail {
+	display: none;
+	margin: 50px auto;
+	max-width: 320px;
+	text-align: center;
+	background-color: rgba(255, 255, 0, 0.701961);
+	padding: 50px;
+}

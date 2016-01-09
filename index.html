@@ -11,10 +11,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/js.cookie.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
 
+	<body>
+		<div id="hidden-content" style="display: none;">
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -32,9 +35,8 @@
 			<section id="header2">
 				<header>
 					<div>
-						<p>The Red Victors invite you to dawn your lab coats and haz mat suits and enter our Radioactive Laboratory! </p>
-						<p>Our Victorian home will be filled with adult science experiments and creative expressions, accompanied by music, libations, black lights and 4 floors full of wonderful people with whom to share this experience.
-						</p>
+						<p>The Red Victors invite you to don your lab coats and hazmat suits and enter our Radioactive Laboratory!</p>
+						 <p>Our Victorian home will be filled with grown-up science experiments and infectious creative expressions, accompanied by music, libations, black lights, and the most exciting group of fellow experimenters.</p>
 					</br>
 						<ul>
 							<li>All 4 Floors of the building will be filled with scientifically-proven adult fun:</li>
@@ -44,7 +46,7 @@
 							<li>Basement Speakeasy</li>
 							<li>Artistic experiments throughout the house</li>
 							<li>Neon Body Painting</li>
-							<li>and more</li>
+							<li>...and more</li>
 						</ul>
 				 	</div>
 				</header>
@@ -104,15 +106,44 @@
 				</ul>
 			</div>
 		</section>
+	</div>
+	<div id="fail">
+		<h1 style="font-size: .8em; margin-bottom: 30px;">Lab Access Denied, Password Incorrect</a></h1>
+		<button id="try-again" style="font-size: 16px;">Try Again</button>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		<script language="javascript">
+		
+		// Look how smart you are! Buy your ticket and dont share the secret!
+		var pass1 = "KABLOOIE"
+		// Look how smart you are! Buy your ticket and dont share the secret!
 
+		function check_for_pass(){
+			var cookies = Cookies.get('pass_saved');
+			if (cookies == 'true') {
+				$('#hidden-content').show();
+				return false;
+			} else {
+				show_password_prompt();
+			}
+		}
+
+		function show_password_prompt() {
+			var password = prompt('Please enter the password to view this page')
+			if (password == pass1) {
+				Cookies.set('pass_saved', 'true', { expires: 7 });
+				$('#hidden-content').show();
+				return false;
+			} else {
+			  	$('#fail').show();
+			  	return false;
+			}
+		}
+		$('#try-again').on('click', function(event){
+			check_for_pass();	
+		})
+		$(document).ready(check_for_pass());
+
+		</script>
 	</body>
 </html>
