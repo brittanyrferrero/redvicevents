@@ -1938,7 +1938,7 @@
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: center;
 		margin: 0;
-		padding: 14em 0 14em 0;
+		padding: 14em 0 6em 0;
 		cursor: default;
 		background-image:    url('../../images/beakers.jpg');
 	    background-size:     cover;
@@ -1982,16 +1982,6 @@
 			width: 100%;
 		}
 
-			#header footer:after {
-				content: '';
-				display: block;
-				position: absolute;
-				bottom: -9em;
-				left: 50%;
-				height: 9em;
-				border-left: solid 1px #fff;
-			}
-
 			#header footer:before {
 				content: '';
 				display: block;
@@ -2009,11 +1999,11 @@
 
 	#header2 {
 		position: relative;
-		color: #fff;
+		color: rgba(0, 0, 0, 0.75);
 		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 		text-align: center;
 		margin: 0;
-		padding: 10em 0 9em 0;
+		padding: 10em 0 3em 0;
 		cursor: default;
 		background-image:    url('../../images/hazmatsuits.jpg');
 	    background-size:     cover;
@@ -2034,7 +2024,7 @@
 
 			#header2 div {
 				background-color:rgba(255, 255, 255, 0.9); 
-				padding: 0 5%; 
+				padding: 30px 5%; 
 				margin: 0 10%; 
 			}
 
@@ -2062,16 +2052,6 @@
 			width: 100%;
 		}
 
-			#header2 footer:after {
-				content: '';
-				display: block;
-				position: absolute;
-				bottom: -9em;
-				left: 50%;
-				height: 9em;
-				border-left: solid 1px #fff;
-			}
-
 			#header2 footer:before {
 				content: '';
 				display: block;
@@ -2083,7 +2063,9 @@
 				margin-left: -45px;
 				margin-bottom: -33px;
 				background: url("images/arrow.svg") no-repeat;
-			}/* Banner */
+			}
+
+/* Banner */
 
 	#banner {
 		position: relative;
@@ -2141,6 +2123,60 @@
 			#banner a:hover {
 				border-bottom-color: rgba(255, 255, 255, 0);
 			}
+
+
+/* Banner 2*/
+
+	#banner2 {
+		position: relative;
+		color: #fff;
+		text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
+		text-align: center;
+		background: #35b88f url("../../images/volunteers.jpg") center center no-repeat;
+		padding: 5em 0 5em 0;
+		margin: 0;
+		background-size: 125% auto;
+	}
+		#banner2 div {
+			margin: 0 10%;
+		    background-color: rgba(0,0,0,.7);
+		    padding: 30px 5%;
+		}
+
+
+		#banner2 .button {
+			color: #35b882;
+			text-shadow: 0 0 0.5px rgba(53, 184, 130, 0.25);
+		}
+
+		#banner2 header {
+			margin: 0 0 2em 0;
+		}
+
+			#banner2 header h2 {
+				font-weight: 400;
+				font-size: 1.75em;
+				letter-spacing: 8px;
+			}
+
+		#banner2 p {
+			margin: 0;
+			padding: 0;
+		}
+
+		#banner2 footer {
+			margin: 2em 0 0 0;
+		}
+
+		#banner2 a {
+			color: inherit;
+			border-bottom-color: rgba(255, 255, 255, 0.5);
+		}
+
+			#banner2 a:hover {
+				border-bottom-color: rgba(255, 255, 255, 0);
+			}
+
 /* Ticket */
 
 	#ticket {
@@ -2391,6 +2427,11 @@
 				background-size: auto, 175% auto;
 			}
 
+			#banner2 {
+				padding: 4em 0 4em 0;
+				background-size: auto, 175% auto;
+			}
+
 	}
 
 /* Narrow */
@@ -2465,6 +2506,17 @@
 			}
 
 				#banner br {
+					display: none;
+				}
+
+		/* Banner 2 */
+
+			#banner2 {
+				padding: 3.5em;
+				background-size: 200% auto;
+			}
+
+				#banner2 br {
 					display: none;
 				}
 
@@ -2647,6 +2699,10 @@
 					padding-right: 2em;
 				}
 
+				#header2 div {
+					margin: 0;
+				}
+
 					#header2 header h1 {
 						font-size: 1.75em;
 						letter-spacing: 6px;
@@ -2683,6 +2739,26 @@
 				}
 
 					#banner header h2 {
+						font-size: 1.5em;
+						letter-spacing: 6px;
+					}
+
+		/* Banner */
+
+			#banner2 {
+				padding: 3em 2em 3em 2em;
+				background-size: auto 150%;
+			}
+
+			#banner2 div {
+				margin: 0;
+			}
+
+				#banner2 header {
+					margin: 0 0 1em 0;
+				}
+
+					#banner2 header h2 {
 						font-size: 1.5em;
 						letter-spacing: 6px;
 					}
